@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!--Part ONE-->
+	<h1>Inspect Element!</h1>
+	<p>Welcome to Inspect Element and the Web Console!</p>
+	
+	<p id="demo" style="color:red"></p>
+	<script type="text/javascript">
+		window.alert(5 + 5);
+		document.getElementById("demo").innerHTML = 5 + 6;
+		console.log(5 + 7);	//use Inspect Element to view console log in the browser	
+	</script>
+	
+	<p>Hint: the missing number is in the web console...</p>
+
+	<!--Part TWO-->
+  <p>
+  <script type="text/javascript">
+    document.write(5 + 8);  // the write happens in this part of the page (paragraph)
+  </script>
+  </p>
+
+	<!--Part THREE-->
+  <script type="text/javascript">
+    function writeMyName() {
+		  document.getElementById("button1").innerHTML = "Paula's button!";
+		  var ul = document.getElementById("list");
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode("I can do this all day!"));
+      ul.appendChild(li);
+	  }
+  </script>
+  <button id="button1" type="button" onClick="writeMyName()">Write My Name</button>
+  <ul id="list"></ul>
+</body>

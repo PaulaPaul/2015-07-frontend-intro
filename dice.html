@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dice JavaScript!</title>
+	<script type="text/javascript">
+    function randomFromTo(from, to){
+      return Math.floor(Math.random() * (to - from + 1) + from);
+    }
+    function rollem() {
+	    var roll1 = randomFromTo(1,6);
+	    var roll2 = randomFromTo(1,6);
+		  document.getElementById("die1").innerHTML = roll1;
+		  document.getElementById("die2").innerHTML = roll2;
+	  }
+  </script>
+</head>
+<body>
+	<h1>Rollem!</h1>
+	<p>Welcome to my JavaScript Dice Game!</p>
+	<div id="die1"></div>
+	<div id="die2"></div>
+  <button id="roll" type="button" onClick="rollem()">Rollem!</button><br>
+</body>
+</html>
